@@ -20,10 +20,17 @@ public class DemoSocketImpl implements SocketIOService {
     public void addListener(SocketIOServer server) {
         server.addEventListener("chatevent", ChatObject.class, (client, data, ackRequest) -> {
             String clientIp = FaSocketUtils.getIpByClient(client);
-            log.debug(clientIp + " *********************** " + "chatevent");
+            log.debug("************ 客户端： " + clientIp + " [chatevent] ************");
             log.debug("data: " + data.toString());
             data.setMessage(data.getMessage() + "[已收到]");
             client.sendEvent("chatevent", data);
+        });
+
+        server.addEventListener("hello", String.class, (client, data, ackRequest) -> {
+            String clientIp = FaSocketUtils.getIpByClient(client);
+            log.debug("************ 客户端： " + clientIp + " [hello] ************");
+            log.debug("data: " + data);
+            client.sendEvent("hello", data + "[已收到]");
         });
     }
 
