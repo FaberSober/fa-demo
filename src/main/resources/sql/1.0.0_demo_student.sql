@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `demo_student`;
-CREATE TABLE `demo_student` (
+
+CREATE TABLE IF NOT EXISTS `demo_student` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `name` varchar(255) NOT NULL COMMENT '学生名',
   `age` int(3) DEFAULT NULL COMMENT '年龄',

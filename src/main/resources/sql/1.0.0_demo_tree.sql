@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS `demo_tree`;
-CREATE TABLE `demo_tree` (
+
+CREATE TABLE IF NOT EXISTS `demo_tree` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `parent_id` int(11) NOT NULL COMMENT '上级节点',
   `name` varchar(255) NOT NULL COMMENT '名称',
