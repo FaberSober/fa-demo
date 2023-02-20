@@ -1,0 +1,1 @@
+ALTER TABLE `file_web`.`demo_student` ADD COLUMN `info2` varchar(255) NULL COMMENT '信息字段2' AFTER `info1`;
