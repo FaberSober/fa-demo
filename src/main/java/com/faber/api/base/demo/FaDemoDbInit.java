@@ -33,9 +33,11 @@ public class FaDemoDbInit implements DbInit {
                 .addSql(new FaDdlSql("初始化表结构", "sql/1.0.0_demo_full.sql"))
                 .addSql(new FaDdlSql("初始化表数据", "sql/1.0.0_demo_data.sql")));
 
-
         list.add(new FaDdl(100_000_001L, "V1.0.1", "更新")
                 .addSql(new FaDdlSql("V1.0.1数据库更新", "sql/1.0.1_demo_update.sql")));
+
+        list.add(new FaDdl(100_000_002L, "V1.0.2", "增加OnlyOffice示例")
+                .addSql(new FaDdlSql("增加OnlyOffice示例", "sql/1.0.2_demo_update.sql")));
 
         return list;
     }
