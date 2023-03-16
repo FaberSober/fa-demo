@@ -10,7 +10,7 @@ public class FaDemoDbInit implements DbInit {
 
     @Override
     public String getNo() {
-        return "demo";
+        return "fa-demo";
     }
 
     @Override
