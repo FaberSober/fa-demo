@@ -15,6 +15,7 @@ public class SocketTaskTestBiz {
         // 生成唯一的任务标识
         String taskId = UUID.fastUUID().toString(true);
         socketTaskVo.setTaskId(taskId);
+        socketTaskVo.setName("测试长时间进度任务");
 
         // 获取任务数量信息
         int total = 100;
