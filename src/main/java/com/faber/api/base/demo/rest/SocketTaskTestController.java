@@ -5,7 +5,8 @@ import com.faber.core.annotation.FaLogBiz;
 import com.faber.core.annotation.FaLogOpr;
 import com.faber.core.utils.BaseResHandler;
 import com.faber.core.vo.msg.Ret;
-import com.faber.core.vo.utils.SocketTaskVo;
+import com.faber.core.vo.socket.SocketTaskStopVo;
+import com.faber.core.vo.socket.SocketTaskVo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -24,6 +25,14 @@ public class SocketTaskTestController extends BaseResHandler {
     public Ret<SocketTaskVo> start() {
         SocketTaskVo data = socketTaskTestBiz.start();
         return ok(data);
+    }
+
+    @FaLogOpr("停止任务")
+    @RequestMapping(value = "/stop", method = RequestMethod.POST)
+    @ResponseBody
+    public Ret<Boolean> stop(@RequestBody SocketTaskStopVo socketTaskStopVo) {
+        socketTaskTestBiz.stop(socketTaskStopVo.getTaskId());
+        return ok();
     }
 
 }

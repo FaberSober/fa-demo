@@ -2,7 +2,8 @@ package com.faber.api.base.demo.biz;
 
 import cn.hutool.core.lang.UUID;
 import com.faber.api.base.admin.socket.SocketTaskImpl;
-import com.faber.core.vo.utils.SocketTaskVo;
+import com.faber.core.vo.socket.SocketTaskHolder;
+import com.faber.core.vo.socket.SocketTaskVo;
 import org.springframework.stereotype.Service;
 
 
@@ -25,6 +26,12 @@ public class SocketTaskTestBiz {
         new Thread(() -> {
             try {
                 for (int i = 0; i < total; i++) {
+                    // 检查任务标志
+                    if (SocketTaskHolder.isTaskStop(taskId)) {
+                        SocketTaskHolder.removeTask(taskId);
+                        break;
+                    }
+
                     Thread.sleep(100); // 模拟任务导入时间花费
                     socketTaskVo.addCur();
 
@@ -37,6 +44,10 @@ public class SocketTaskTestBiz {
         }).start();
 
         return socketTaskVo;
+    }
+
+    public void stop(String taskId) {
+        SocketTaskHolder.stopTask(taskId);
     }
 
 }
