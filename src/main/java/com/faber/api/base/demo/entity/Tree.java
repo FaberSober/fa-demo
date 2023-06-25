@@ -25,7 +25,7 @@ public class Tree extends BaseDelEntity {
 
     @SqlTreeId
     @TableId(type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     @SqlTreeName
     @ExcelProperty("名称")
@@ -34,7 +34,7 @@ public class Tree extends BaseDelEntity {
     @SqlTreeParentId
     @SqlEquals
     @ExcelProperty("上级节点")
-    private Long parentId;
+    private Integer parentId;
 
     @SqlSorter
     @ExcelProperty("排序ID")

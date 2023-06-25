@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @FaLogBiz("Tree测试")
 @Controller
 @RequestMapping("/api/base/demo/tree")
-public class TreeController extends BaseTreeController<TreeBiz, Tree, Long> {
+public class TreeController extends BaseTreeController<TreeBiz, Tree, Integer> {
 
 }

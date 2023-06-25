@@ -32,7 +32,7 @@ public class Student extends BaseDelEntity {
 
     @ColumnWidth(10)
     @TableId(type = IdType.AUTO)
-    private String id;
+    private Integer id;
 
     @ExcelProperty("学生名")
     private String name;

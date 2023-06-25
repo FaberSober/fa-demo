@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @FaLogBiz("学生")
 @RestController
 @RequestMapping("/api/base/demo/student")
-public class StudentController extends BaseController<StudentBiz, Student, String> {
+public class StudentController extends BaseController<StudentBiz, Student, Integer> {
 
     /**
      * 分页查询
