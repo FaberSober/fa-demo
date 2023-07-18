@@ -20,6 +20,13 @@ spring:
 server:
   port: 80
 
+# elasticsearch
+easy-es:
+  enable: true #默认为true,若为false则认为不启用本框架
+  address: 127.0.0.1:9200
+  #  username: elastic #若无 则可省略此行配置
+  #  password: WG7WVmuNMtM4GwNYkyWH #若无 则可省略此行配置
+
 socketio:
   host: 127.0.0.1
   port: 8081

@@ -1,5 +1,6 @@
-package com.faber.demo;
+package com.faber.api.demo;
 
+import cn.easyes.starter.register.EsMapperScan;
 import cn.xuyanwu.spring.file.storage.EnableFileStorage;
 import com.alicp.jetcache.anno.config.EnableMethodCache;
 import com.dtflys.forest.springboot.annotation.ForestScan;
@@ -23,6 +24,7 @@ import java.util.Set;
 @EnableTransactionManagement
 @ServletComponentScan
 @EnableMethodCache(basePackages = "com.faber")
+@EsMapperScan("com.faber.api.**.esmapper") // 不使用ES屏蔽此行代码
 @ForestScan("com.faber")
 @EnableFileStorage // https://spring-file-storage.xuyanwu.cn
 public class FaTestApp {

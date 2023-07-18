@@ -1,7 +1,7 @@
-package com.faber.demo.student;
+package com.faber.api.demo.student;
 
 import com.faber.api.base.demo.mapper.StudentMapper;
-import com.faber.demo.FaTestApp;
+import com.faber.api.demo.FaTestApp;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

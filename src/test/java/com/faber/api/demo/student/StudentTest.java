@@ -1,10 +1,10 @@
-package com.faber.demo.student;
+package com.faber.api.demo.student;
 
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.faber.api.base.demo.entity.Student;
 import com.faber.api.base.demo.mapper.StudentMapper;
+import com.faber.api.demo.FaTestApp;
 import com.faber.core.context.BaseContextHandler;
-import com.faber.demo.FaTestApp;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

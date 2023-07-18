@@ -1,9 +1,9 @@
-package com.faber.demo.es;
+package com.faber.api.demo.es;
 
 import cn.easyes.core.conditions.LambdaEsQueryWrapper;
 import com.faber.api.base.demo.es.Document;
 import com.faber.api.base.demo.esmapper.DocumentMapper;
-import com.faber.demo.FaTestApp;
+import com.faber.api.demo.FaTestApp;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
