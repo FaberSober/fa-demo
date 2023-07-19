@@ -1,6 +1,6 @@
 package com.faber.api.base.demo.esmapper;
 
-import cn.easyes.core.conditions.interfaces.BaseEsMapper;
+import cn.easyes.core.core.BaseEsMapper;
 import com.faber.api.base.demo.es.Document;
 
 /**
