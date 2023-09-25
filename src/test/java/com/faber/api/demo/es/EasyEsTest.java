@@ -1,6 +1,6 @@
 package com.faber.api.demo.es;
 
-import cn.easyes.core.conditions.LambdaEsQueryWrapper;
+import cn.easyes.core.conditions.select.LambdaEsQueryWrapper;
 import com.faber.api.base.demo.es.Document;
 import com.faber.api.base.demo.esmapper.DocumentMapper;
 import com.faber.api.demo.FaTestApp;
