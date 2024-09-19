@@ -1,8 +1,8 @@
 package com.faber.api.base.demo.biz;
 
-import com.alicp.jetcache.anno.CacheInvalidate;
-import com.alicp.jetcache.anno.CacheUpdate;
-import com.alicp.jetcache.anno.Cached;
+//import com.alicp.jetcache.anno.CacheInvalidate;
+//import com.alicp.jetcache.anno.CacheUpdate;
+//import com.alicp.jetcache.anno.Cached;
 import com.faber.api.base.demo.entity.Student;
 import com.faber.core.web.biz.BaseBiz;
 import com.faber.api.base.demo.mapper.StudentMapper;
@@ -20,19 +20,19 @@ import java.io.Serializable;
 @Service
 public class StudentBiz extends BaseBiz<StudentMapper, Student> {
 
-    @Cached(name="student:", key="#id")
+//    @Cached(name="student:", key="#id")
     @Override
     public Student getById(Serializable id) {
         return super.getById(id);
     }
 
-    @CacheUpdate(name="student:", key="#entity.id", value="#entity")
+//    @CacheUpdate(name="student:", key="#entity.id", value="#entity")
     @Override
     public boolean updateById(Student entity) {
         return super.updateById(entity);
     }
 
-    @CacheInvalidate(name="student:", key="#id")
+//    @CacheInvalidate(name="student:", key="#id")
     @Override
     public boolean removeById(Serializable id) {
         return super.removeById(id);

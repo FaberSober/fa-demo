@@ -21,7 +21,7 @@ public class RedisTestController extends BaseResHandler {
     @RequestMapping(value = "/addCache", method = RequestMethod.GET)
     @ResponseBody
     public Ret<Boolean> addCache(@RequestParam("key") String key, @RequestParam("value") String value) {
-        redisTestBiz.addCache(key, value);
+//        redisTestBiz.addCache(key, value);
         return ok();
     }
 
@@ -29,8 +29,8 @@ public class RedisTestController extends BaseResHandler {
     @RequestMapping(value = "/getCache", method = RequestMethod.GET)
     @ResponseBody
     public Ret<String> getCache(@RequestParam("key") String key) {
-        String data = redisTestBiz.getCache(key);
-        return ok(data);
+//        String data = redisTestBiz.getCache(key);
+        return ok("data");
     }
 
 }
