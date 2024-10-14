@@ -1,7 +1,7 @@
 package com.faber.api.base.demo.es;
 
-import cn.easyes.annotation.IndexName;
 import lombok.Data;
+import org.dromara.easyes.annotation.IndexName;
 
 /**
  * @author xupengfei

@@ -1,7 +1,7 @@
 package com.faber.api.base.demo.esmapper;
 
-import cn.easyes.core.core.BaseEsMapper;
 import com.faber.api.base.demo.es.Document;
+import org.dromara.easyes.core.kernel.BaseEsMapper;
 
 /**
  * @author xupengfei

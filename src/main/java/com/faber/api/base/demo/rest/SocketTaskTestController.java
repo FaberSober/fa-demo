@@ -9,7 +9,7 @@ import com.faber.core.vo.socket.SocketTaskStopVo;
 import com.faber.core.vo.socket.SocketTaskVo;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 @FaLogBiz("Redis测试")
 @RestController
