@@ -1,7 +1,7 @@
 package com.faber.api.base.demo.biz;
 
 import cn.hutool.core.lang.UUID;
-import com.faber.api.base.admin.socket.SocketTaskImpl;
+//import com.faber.api.base.admin.socket.SocketTaskImpl;
 import com.faber.core.vo.socket.SocketTaskHolder;
 import com.faber.core.vo.socket.SocketTaskVo;
 import org.springframework.stereotype.Service;
@@ -36,7 +36,7 @@ public class SocketTaskTestBiz {
                     socketTaskVo.addCur();
 
                     // socket通知客户端任务执行进度
-                    SocketTaskImpl.sendProgress(socketTaskVo);
+//                    SocketTaskImpl.sendProgress(socketTaskVo);
                 }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
