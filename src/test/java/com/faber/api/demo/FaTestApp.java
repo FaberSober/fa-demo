@@ -1,6 +1,6 @@
 package com.faber.api.demo;
 
-import cn.easyes.starter.register.EsMapperScan;
+import org.dromara.easyes.starter.register.EsMapperScan;
 import com.dtflys.forest.springboot.annotation.ForestScan;
 import com.yomahub.tlog.core.enhance.bytes.AspectLogEnhance;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,16 +1,16 @@
 package com.faber.api.demo.es;
 
-import cn.easyes.core.conditions.select.LambdaEsQueryWrapper;
 import com.faber.api.base.demo.es.Document;
 import com.faber.api.base.demo.esmapper.DocumentMapper;
 import com.faber.api.demo.FaTestApp;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.dromara.easyes.core.conditions.select.LambdaEsQueryWrapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -23,8 +23,7 @@ import java.util.List;
 @SpringBootTest(classes = {FaTestApp.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class EasyEsTest {
 
-    @Resource
-    DocumentMapper documentMapper;
+    @Resource DocumentMapper documentMapper;
 
     @Test
     public void testInsert() {
