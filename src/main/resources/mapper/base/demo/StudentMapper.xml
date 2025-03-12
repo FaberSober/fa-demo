@@ -3,4 +3,8 @@
 
 <mapper namespace="com.faber.api.base.demo.mapper.StudentMapper">
 
+    <delete id="deleteAll">
+        delete from demo_student
+    </delete>
+
 </mapper>
