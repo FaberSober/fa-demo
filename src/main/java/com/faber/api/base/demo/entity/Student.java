@@ -66,20 +66,23 @@ public class Student extends BaseDelEntity {
     @ExcelProperty("租户ID")
     private Integer tenantId;
 
-    @TableField(typeHandler = JacksonTypeHandler.class)
+    // @TableField(typeHandler = JacksonTypeHandler.class)
     @ExcelProperty("标签")
+    @TableField(exist = false)
     private Tag[] tags;
 
-    @TableField(typeHandler = JacksonTypeHandler.class)
+    // @TableField(typeHandler = JacksonTypeHandler.class)
     @ExcelProperty("详细信息")
+    @TableField(exist = false)
     private Info info;
 
     @ExcelIgnore
-    @TableField(value = "tags -> '$[*].name'",
-            insertStrategy = FieldStrategy.NEVER,
-            updateStrategy = FieldStrategy.NEVER,
-            exist = false,
-            select = false)
+    @TableField(exist = false)
+    // @TableField(value = "tags -> '$[*].name'",
+    //         insertStrategy = FieldStrategy.NEVER,
+    //         updateStrategy = FieldStrategy.NEVER,
+    //         exist = false,
+    //         select = false)
     private String tagNames;
 
     @Data
