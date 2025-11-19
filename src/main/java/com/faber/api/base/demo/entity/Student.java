@@ -4,7 +4,6 @@ import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.annotation.write.style.ColumnWidth;
 import com.baomidou.mybatisplus.annotation.*;
-import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import com.faber.core.annotation.FaColDict;
 import com.faber.core.annotation.FaModalName;
 import com.faber.core.annotation.SqlEquals;
@@ -66,12 +65,12 @@ public class Student extends BaseDelEntity {
     @ExcelProperty("租户ID")
     private Integer tenantId;
 
-    // @TableField(typeHandler = JacksonTypeHandler.class)
+    // @TableField(typeHandler = UniversalJsonTypeHandler.class)
     @ExcelProperty("标签")
     @TableField(exist = false)
     private Tag[] tags;
 
-    // @TableField(typeHandler = JacksonTypeHandler.class)
+    // @TableField(typeHandler = UniversalJsonTypeHandler.class)
     @ExcelProperty("详细信息")
     @TableField(exist = false)
     private Info info;
