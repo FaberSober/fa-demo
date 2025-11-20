@@ -14,7 +14,7 @@ import com.faber.api.base.demo.entity.Student;
 public interface StudentMapper extends FaBaseMapper<Student> {
 
     // 添加拦截忽略注解，指定忽略全表删除拦截器
-    @InterceptorIgnore(blockAttack = "true")
-    int deleteAll();
+    // @InterceptorIgnore(blockAttack = "true")
+    // int deleteAll();
 
 }
