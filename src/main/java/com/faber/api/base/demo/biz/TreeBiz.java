@@ -12,6 +12,6 @@ import org.springframework.stereotype.Service;
  * @date 2022/11/30 18:29
  */
 @Service
-public class TreeBiz extends BaseTreeBiz<TreeMapper, Tree> {
+public class TreeBiz extends BaseTreeBiz<TreeMapper, Tree, Integer> {
 
 }
