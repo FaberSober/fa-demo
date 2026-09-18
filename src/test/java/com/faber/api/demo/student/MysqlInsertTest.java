@@ -29,7 +29,7 @@ public class MysqlInsertTest {
         student.setName("张三");
         student.setAge(18);
         student.setCorpId(1);
-        student.setTenantId(1);
+        student.setTenantId("1");
         studentMapper.insert(student);
     }
 
@@ -41,7 +41,7 @@ public class MysqlInsertTest {
             student.setName("张三");
             student.setAge(18);
             student.setCorpId(1);
-            student.setTenantId(1);
+            student.setTenantId("1");
             studentMapper.insert(student);
         }
     }

@@ -63,7 +63,7 @@ public class Student extends BaseDelEntity {
 
     @SqlEquals
     @ExcelProperty("租户ID")
-    private Integer tenantId;
+    private String tenantId;
 
     // @TableField(typeHandler = UniversalJsonTypeHandler.class)
     @ExcelProperty("标签")
