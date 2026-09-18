@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import com.faber.core.annotation.FaColDict;
 import com.faber.core.annotation.FaModalName;
 import com.faber.core.annotation.SqlEquals;
-import com.faber.core.bean.BaseDelEntity;
+import com.faber.core.bean.BaseTnDelEntity;
 import com.faber.core.config.easyexcel.type.FaJsonObj;
 import com.faber.core.enums.SexEnum;
 import lombok.AllArgsConstructor;
@@ -27,7 +27,7 @@ import java.util.Date;
 @Data
 @FaModalName(name = "学生")
 @TableName(value = "demo_student", autoResultMap = true)
-public class Student extends BaseDelEntity {
+public class Student extends BaseTnDelEntity {
 
     @ColumnWidth(10)
     @TableId(type = IdType.AUTO)
@@ -60,10 +60,6 @@ public class Student extends BaseDelEntity {
     @SqlEquals
     @ExcelProperty("企业ID")
     private Integer corpId;
-
-    @SqlEquals
-    @ExcelProperty("租户ID")
-    private String tenantId;
 
     // @TableField(typeHandler = UniversalJsonTypeHandler.class)
     @ExcelProperty("标签")
