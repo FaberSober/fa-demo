@@ -4,8 +4,8 @@ import com.faber.api.base.security.biz.RequestCryptoBiz;
 import com.faber.core.annotation.FaLogBiz;
 import com.faber.core.annotation.FaNoLog;
 import com.faber.core.config.annotation.Permission;
-import com.faber.core.context.BaseContextHandler;
-import com.faber.core.crypto.CryptoEnvelope;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import com.faber.core.utils.BaseResHandler;
 import com.faber.core.vo.msg.Ret;
 import jakarta.validation.constraints.NotNull;
@@ -28,9 +28,9 @@ public class CryptoDemoController extends BaseResHandler {
     }
 
     @PostMapping("/roundtrip")
-    public Ret<DemoText> roundtrip(@RequestBody CryptoEnvelope envelope) {
-        return ok(biz.decryptDemo(envelope, BaseContextHandler.getUserId(), DemoText.class));
+    public Ret<DemoText> roundtrip(@Valid @RequestBody DemoText body, HttpServletRequest request) {
+        return ok(new DemoText(biz.decryptField(body.text(), request, "text"), body.age()));
     }
 
-    public record DemoText(@NotNull @Size(max = 4096) String text) {}
+    public record DemoText(@NotNull @Size(max = 5860) String text, @NotNull Integer age) {}
 }
